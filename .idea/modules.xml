@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Maintenance - BungeeCord.iml" filepath="$PROJECT_DIR$/Maintenance - BungeeCord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BungeeMaintenanceSystem.iml" filepath="$PROJECT_DIR$/BungeeMaintenanceSystem.iml" />
     </modules>
   </component>
 </project>

@@ -2,7 +2,7 @@
   <artifact type="jar" name="Maintenance-BungeeCord">
     <output-path>$PROJECT_DIR$/1.0.3</output-path>
     <root id="archive" name="Maintenance-BungeeCord.jar">
-      <element id="module-output" name="Maintenance - BungeeCord" />
+      <element id="module-output" name="BungeeMaintenanceSystem" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
