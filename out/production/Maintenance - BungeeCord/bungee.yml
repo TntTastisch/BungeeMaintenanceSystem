@@ -1,6 +1,0 @@
-name: Maintenance
-version: 1.0.3
-author: TntTastisch
-main: de.TntTastisch.Spigot.Maintenance
-commands:
-  maintenance:
