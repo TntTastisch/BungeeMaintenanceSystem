@@ -1,0 +1,23 @@
+# Use %reason% for the Mainteance-Reason.
+Maintenance:
+  enable: false
+  prefix: '&8[&4Maintenance&8] &7'
+  permissions: 'maintenance.use'
+  noperms: '&cYou have no rights to this command.'
+  reloaded: '&7The configuration was &asuccessfully &7reloaded.'
+  maintenancejoin: 'maintenance.bypass'
+  reason: '&7Cunstruction'
+  noreason: '&cPlease specify a maintenance reason!'
+Messages:
+  Version: '&4Maintenance'
+  MaintenanceKickMessage: '&8>> &4ServerNetwork.com &8<<\n&7This network is now under maintenance\n\n&7Reason&8: %reason%\n\n&7You want to contact us?\n&7TeamSpeak &8>> &ets.yourservernetwork.com\n&7Homepage &8>> &ewww.yourservernetwork.com'
+  MaintenanceMessage: '&8>> &4ServerNetwork.com &8<<\n&7This network is currently under maintenance\n\n&7Reason&8: %reason%\n\n&7You want to contact us?\n&7TeamSpeak &8>> &ets.yourservernetwork.com\n&7Homepage &8>> &ewww.yourservernetwork.com'
+  Enabled: '&7The maintenancemode was successfully &aenabled&7 for %reason%'
+  Disabled: '&7The maintenancemode was successfully &cdisabled&7.'
+  alreadyEnable: '&cThe maintenancemode is currently &aenabled&7.'
+  alreadyDisabled: '&cThe maintenancemode is currently &cdisabled&7.'
+MOTD:
+  FirstMOTD: '&4ServerNetwork.com &8- &fServer Network &8[&e1.8-1.12&8]'
+  SecondMOTD: '&aWe are online again &8| &4Maintenance by TntTastisch'
+  MaintenanceFirstMOTD: '&4ServerNetwork.com &8- &fServer Network &8[&e1.8-1.12&8]'
+  MaintenanceSecondMOTD: '&&8[&c!&8] &7This network is currently under &4maintenance&7!'
