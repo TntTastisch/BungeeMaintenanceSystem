@@ -8,6 +8,8 @@ import net.md_5.bungee.api.event.*;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
+import static de.TntTastisch.Spigot.Maintenance.*;
+
 public class ServerPingListener implements Listener {
 
     @SuppressWarnings("deprecation")
@@ -16,14 +18,18 @@ public class ServerPingListener implements Listener {
         ServerPing ping = e.getResponse();
         ServerPing.Players players = ping.getPlayers();
         ServerPing.Protocol protocol = ping.getVersion();
-        if (Maintenance.config.getBoolean("Maintenance.enable")) {
+        if (maintenance) {
             protocol.setProtocol(2);
-            ping.setDescription(Maintenance.MaintenanceFirstMOTD + "\n" + Maintenance.MaintenanceSecondMOTD);
-            protocol.setName(Maintenance.version);
+            if(motdEnabled) {
+                ping.setDescription(MaintenanceFirstMOTD + "\n" + MaintenanceSecondMOTD);
+            }
+            protocol.setName(version);
             ping.setVersion(protocol);
             ping.setPlayers(players);
-        } else if (!Maintenance.maintenance) {
-            ping.setDescription(Maintenance.FirstMOTD + "\n" + Maintenance.SecondMOTD);
+            return;
+        }
+        if(motdEnabled) {
+            ping.setDescription(FirstMOTD + "\n" + SecondMOTD);
         }
     }
 
@@ -31,9 +37,9 @@ public class ServerPingListener implements Listener {
     public void onLogin(PostLoginEvent event) {
         ProxiedPlayer player = event.getPlayer();
 
-        if (Maintenance.maintenance) {
-            if (!(player.hasPermission(Maintenance.permissions) || player.hasPermission(Maintenance.maintenancejoin))) {
-                player.disconnect(new TextComponent(Maintenance.MaintenanceMessage));
+        if (maintenance) {
+            if (!(player.hasPermission(permissions) || player.hasPermission(maintenancejoin))) {
+                player.disconnect(new TextComponent(MaintenanceMessage.replace("%reason%", reason)));
             }
         }
     }

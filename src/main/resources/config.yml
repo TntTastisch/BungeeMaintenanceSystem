@@ -1,4 +1,4 @@
-# Use %reason% for the Mainteance-Reason.
+# Use %reason% for the Maintenance-Reason.
 Maintenance:
   enable: false
   prefix: '&8[&4Maintenance&8] &7'
@@ -6,7 +6,7 @@ Maintenance:
   noperms: '&cYou have no rights to this command.'
   reloaded: '&7The configuration was &asuccessfully &7reloaded.'
   maintenancejoin: 'maintenance.bypass'
-  reason: '&7Cunstruction'
+  reason: 'Construction'
   noreason: '&cPlease specify a maintenance reason!'
 Messages:
   Version: '&4Maintenance'

@@ -1,5 +1,5 @@
 name: Maintenance
-version: 1.0.3
+version: ${project.version}
 author: TntTastisch
 main: de.TntTastisch.Spigot.Maintenance
 commands:
